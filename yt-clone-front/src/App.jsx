@@ -2,10 +2,11 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { AiOutlineSearch, AiFillYoutube, AiOutlineMenu, AiFillHome } from "react-icons/ai";
 import { HiMicrophone } from 'react-icons/hi'
-import {MdOutlineExplore, MdLocalPlay, MdVideoLibrary} from 'react-icons/md'
+import {MdOutlineExplore, MdLocalPlay, MdVideoLibrary, MdMoreVert} from 'react-icons/md'
 import { useMediaQuery } from 'react-responsive'
 import {BsFillCollectionPlayFill } from 'react-icons/bs'
 import {  GiBackwardTime} from 'react-icons/gi'
+import { FaRegUserCircle} from 'react-icons/fa'
 
 const leftIconsProps = {
 
@@ -86,7 +87,7 @@ function App() {
 
         <div className="hidden md:flex">
           
-          <input className="border-2 border-gray-600 py-1 px-2 bg-[#121212]" placeholder="Buscar" />
+          <input className="border-2 border-gray-600 py-1 px-2 bg-[#121212] text-white hover:border-blue-700 focus:border-blue-700 outline-none" placeholder="Buscar" />
           <button className="bg-[#303030] py-2 px-5 h-auto">
             <AiOutlineSearch color='white' size={25} />
           </button>
@@ -96,12 +97,11 @@ function App() {
         </div>
 
         <div className="flex gap-5 items-center text-white">
-          <AiOutlineSearch size={30} />
-          <img
-            className="w-10 h-10 rounded-full object-center"
-            src="https://www.elsoldemexico.com.mx/doble-via/virales/ey580c-cheems.jpg/ALTERNATES/LANDSCAPE_1140/Cheems.jpg"
-            alt=""
-          />
+          <MdMoreVert size={30} />
+          <button className="flex border-2 border-blue-700 items-center gap-3 px-3 py-2 uppercase text-blue-600 hover:bg-blue-500 hover:bg-opacity-30">
+            <FaRegUserCircle size={20} />
+            <span>inciar sesión</span>
+          </button>
         </div>
       </header>
 
